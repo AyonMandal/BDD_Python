@@ -1,6 +1,7 @@
 import pdb
 import sys
 import time
+import os
 
 from behave import *
 # from parse import parse
@@ -84,7 +85,8 @@ def hobbies_selected(context, hobbies):
 def picture_is_uploaded(context, file):
     try:
         BrowserGeneral.vertical_scroll(context.driver, 200)
-        DemoSqaLogin(context.driver).picture_upload(file)
+        path_file = str(os.getcwd()) + "\{}".format(file)
+        DemoSqaLogin(context.driver).picture_upload(path_file)
         context.start_logger.info("File was successfully uploaded : {}".format(file))
     except Exception as e:
         context.start_logger.error(e)

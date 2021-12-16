@@ -26,4 +26,4 @@ Feature: Automation of the login form using BDD
 
     Examples:
     | firstname | lastname|email              |sex |mobile_no |dateofbirth     |hobbies             |file                                            |state  |city   |
-    | Ayon      | Mandal  |testmail1@gmail.com|Male|7003432515|20 December 1997|Reading,Sports,Music|F:\app\pythonProject\Python_Behave\banner-01.jpg|Haryana|Panipat|
+    | Ayon      | Mandal  |testmail1@gmail.com|Male|7003432515|20 December 1997|Reading,Sports,Music|banner-01.jpg|Haryana|Panipat|
