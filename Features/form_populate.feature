@@ -25,5 +25,5 @@ Feature: Automation of the login form using BDD
     Then Modal is displayed and closed
 
     Examples:
-    | firstname | lastname|email              |sex |mobile_no |dateofbirth     |hobbies             |file                                            |state  |city   |
+    | firstname | lastname|email              |sex |mobile_no |dateofbirth     |hobbies             |file         |state  |city   |
     | Ayon      | Mandal  |testmail1@gmail.com|Male|7003432515|20 December 1997|Reading,Sports,Music|banner-01.jpg|Haryana|Panipat|
