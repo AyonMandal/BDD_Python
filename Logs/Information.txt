@@ -1,0 +1,2 @@
+This directory will contain the information of the logs.
+When the code is downloaded in locals, ensure to have this folder so that all logs file are saved in this location.
