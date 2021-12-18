@@ -6,3 +6,4 @@ Reports/history
 testing.py
 *.log
 allure-report
+Screenshots
