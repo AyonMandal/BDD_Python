@@ -2,6 +2,7 @@ import pdb
 from _datetime import datetime
 
 from selenium import webdriver
+from selenium.webdriver.edge.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
@@ -30,8 +31,6 @@ def before_feature(context, feature):
             context.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
         elif context.browser == 'Chrome':
             context.driver = webdriver.Chrome(ChromeDriverManager().install())
-        elif context.browser == 'Edge':
-            context.driver = webdriver.Edge(EdgeChromiumDriverManager(log_level='INFO').install())
         else:
             context.driver = webdriver.Chrome(ChromeDriverManager().install())
         context.start_logger.info("{} browser started successfully!".format(context.browser.upper()))
