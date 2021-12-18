@@ -1,6 +1,7 @@
 import pdb
 from _datetime import datetime
 
+import allure
 from selenium import webdriver
 from selenium.webdriver.edge.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
@@ -57,3 +58,16 @@ def after_scenario(context, scenario):
 
 def after_feature(context, feature):
     context.driver.quit()
+
+
+def after_step(context, step):
+    current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
+    if step.status == "failed":
+        # context.driver.save_screenshot('Screenshots\\{}_fail.png'.format(current_time))
+        allure.attach(context.driver.get_screenshot_as_png(), name='{}_fail.png'.format(current_time),
+                      attachment_type=allure.attachment_type.PNG)
+
+    else:
+        # context.driver.save_screenshot('Screenshots\\{}_pass.png'.format(current_time))
+        allure.attach(context.driver.get_screenshot_as_png(), name='{}_pass.png'.format(current_time),
+                      attachment_type=allure.attachment_type.PNG)

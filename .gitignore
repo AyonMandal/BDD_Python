@@ -2,5 +2,7 @@ venv
 .idea
 Logs/*.log
 Reports/*.json
+Reports/history
 testing.py
 *.log
+allure-report
